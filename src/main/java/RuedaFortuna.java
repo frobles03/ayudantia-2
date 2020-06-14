@@ -10,11 +10,12 @@ public class RuedaFortuna {
 
 
 //control de excepciones.
+    //No permite ingresar letras
     /*
     public void validador(){
 
         try{
-
+            //inrgesar nuemro de casillas
             if (numeroCasillas>0) {
 
                 System.out.println("numero valido");
@@ -32,6 +33,15 @@ public class RuedaFortuna {
         }
     }
 */
+    //validador de cantidad de casillas
+    /*
+      if(numeroCasillas>  4 && numeroCasillas<100){
+            System.out.println("El numero de casillas sera de: "+numeroCasillas);
+        }else{
+            System.out.println("numero no valido, por favor ingrese el numero nuevamente ");
+            //validador();
+        }
+     */
     public int inicializarRueda (int numeroCasillas){
         System.out.println("ingrese el numero de casillas:");
         /*
