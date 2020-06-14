@@ -4,18 +4,15 @@ import java.lang.Math;
 public class RuedaFortuna {
 
 
+   // public int Ncasillas;
     private int[] casillas;
 
-    public int numeroCasillas;
 
-    public void iniciar(){
-        inicializarRueda();
 
-    }
-
+//control de excepciones.
+    /*
     public void validador(){
-        Scanner in= new Scanner(System.in);
-        numeroCasillas = in.nextInt();
+
         try{
 
             if (numeroCasillas>0) {
@@ -34,37 +31,45 @@ public class RuedaFortuna {
             validador();
         }
     }
-
-    public void inicializarRueda(){
+*/
+    public int inicializarRueda (int numeroCasillas){
         System.out.println("ingrese el numero de casillas:");
+        /*
+        Scanner in= new Scanner(System.in);
+        numeroCasillas = in.nextInt();
 
-        validador();
 
-        if(numeroCasillas>=4 && numeroCasillas<=100){
+
+         */
+        if(numeroCasillas>  4 && numeroCasillas<100){
             System.out.println("El numero de casillas sera de: "+numeroCasillas);
         }else{
             System.out.println("numero no valido, por favor ingrese el numero nuevamente ");
-            validador();
+            //validador();
         }
-        lanzarRueda();
 
+        return numeroCasillas;
     }
 
-    public int lanzarRueda(){
-        int aleatorio;
-        int aleatorio2 = (int)(Math.random()*numeroCasillas);
-        int matriz[]= new int [numeroCasillas];
-        Random rNum=new Random();
-      casillas= new int[numeroCasillas];
-        System.out.println("inicio de spoiler");
-        for (int x=0; x < matriz.length; x++) {
-            matriz[x]= (int) (Math.random()*100+1);
 
-            System.out.println(matriz[x]);
+
+    public int lanzarRueda(int Ncasillas){
+        int aleatorio;
+        //random de cassilla ganadora
+        int aleatorio2 = (int)(Math.random()*Ncasillas);
+        //largo de casillas
+        int casillas[]= new int [Ncasillas];
+        Random rNum=new Random();
+      casillas= new int[Ncasillas];
+        System.out.println("inicio de spoiler");
+        for (int x=0; x < casillas.length; x++) {
+            casillas[x]= (int) (Math.random()*100+1);
+
+            System.out.println(casillas[x]);
 
         }
         System.out.println("fin de spoiler");
-        System.out.println("numero ganador es la casilla: "+aleatorio2+" con numero: "+matriz[aleatorio2]);
+        System.out.println("numero ganador es la casilla: "+aleatorio2+" con numero: "+casillas[aleatorio2]);
 
 
         return 0;
